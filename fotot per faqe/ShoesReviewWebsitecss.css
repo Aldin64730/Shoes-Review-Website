@@ -1,0 +1,10 @@
+.headerContainer{
+    display: flex;
+    align-items: flex-start;
+}
+
+.LoginForm{
+    display: flex;
+    align-items: center;
+
+}
