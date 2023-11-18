@@ -1,10 +1,36 @@
 .headerContainer{
     display: flex;
-    align-items: flex-start;
+    justify-content: space-around;
+    
+}
+
+
+.RreshtiLogove{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    
 }
 
 .LoginForm{
-    display: flex;
-    align-items: center;
-
+    display: flexbox;
+    justify-content: center;
 }
+
+.quote{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+
+.ad{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
+ 
