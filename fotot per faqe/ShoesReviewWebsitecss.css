@@ -4,8 +4,18 @@
     
 }
 
+header{
+    background-color: rgb(109, 85, 130);
+}
+
+.HomeSupportDheAdvertise{
+    display: flex;
+    justify-content: right;
+
+}
 
 .RreshtiLogove{
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     justify-content: space-around;
@@ -14,23 +24,42 @@
 
 .LoginForm{
     display: flexbox;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .quote{
     display: flex;
     flex-wrap: wrap;
-    width: 200px;
+    width: 300px;
+    font-size: medium;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: space-around;
 }
-
 
 .ad{
+    background-color: black;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
+footer{
+    background-color: rgb(232, 232, 232);
+}
 
+.footermain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:right;
+}
 
+.footercenter{
+    display: flexbox;
+}
+
+.Links{
+    display: flexbox;
+    justify-items:flex-end
+}
 
  
