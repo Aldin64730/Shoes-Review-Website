@@ -45,9 +45,15 @@ header{
 
 footer{
     background-color: rgb(232, 232, 232);
+   
+}
+
+p{
+    color: rgb(92, 92, 92);
 }
 
 .footermain{
+    color: rgb(92, 92, 92);
     display: flex;
     flex-wrap: wrap;
     justify-content:right;
@@ -58,6 +64,7 @@ footer{
 }
 
 .Links{
+    color: rgb(92, 92, 92);
     display: flexbox;
     justify-items:flex-end
 }
