@@ -5,7 +5,14 @@
 }
 
 header{
-    background-color: rgb(109, 85, 130);
+    background-color: rgb(167, 77, 246);
+}
+
+.Emri{
+    display: flex;
+    padding-top: 2%;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
 }
 
 .HomeSupportDheAdvertise{
@@ -34,6 +41,7 @@ header{
     font-size: medium;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     justify-content: space-around;
+    
 }
 
 .ad{
@@ -44,23 +52,24 @@ header{
 }
 
 footer{
-    background-color: rgb(232, 232, 232);
-   
+    background-color: rgba(168, 163, 163, 0.742);
+   display: flex;
+   justify-content: space-between;
 }
 
-p{
-    color: rgb(92, 92, 92);
-}
+
 
 .footermain{
     color: rgb(92, 92, 92);
     display: flex;
     flex-wrap: wrap;
-    justify-content:right;
+    width: 300px;
+    
 }
 
 .footercenter{
     display: flexbox;
+    
 }
 
 .Links{
@@ -69,4 +78,3 @@ p{
     justify-items:flex-end
 }
 
- 
