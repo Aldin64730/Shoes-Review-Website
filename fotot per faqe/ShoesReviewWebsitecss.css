@@ -30,21 +30,22 @@ header{
     
 }
 
-.LoginForm form {
-    display: flex;
-    flex-wrap: wrap;
+.LoginForm{
+    font-family:"Poppins" , sans-serif;
 }
-
 
 .LoginForm input[type="email"] {
     height: 30px;
     width: 200px;
+    border-radius: 10px;
 }
 
 .LoginForm input[type="submit"] {
     height: 30px;
     width: 70px;
+    border-radius: 10px; 
 }
+
 
 .quote{
     display: flex;
@@ -52,16 +53,22 @@ header{
     width: 300px;
     font-size: medium;
     font-family:"Poppins" , sans-serif;
+    justify-content: space-around;   
+}
+
+.ContactingSites{
+    display: flex;
     justify-content: space-around;
     
 }
 
-.ad {
+.ad{ 
     background-color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 .ad img {
@@ -84,7 +91,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     width: 300px;
-    
+    font-family:"Poppins" , sans-serif;
 }
 
 .footercenter{
@@ -92,8 +99,9 @@ footer{
     justify-items: center;
     justify-content: center;
     color: rgb(92, 92, 92);
-    padding-top: 30px;
+    padding-top: 50px;
     padding-right: 80px;
+    font-family:"Poppins" , sans-serif;
 }
 
 .Links{
@@ -101,6 +109,7 @@ footer{
     padding-right: 80px;
     color: rgb(92, 92, 92);
     display: flexbox;
-    justify-items:flex-end
+    justify-items:flex-end;
+    font-family:"Poppins" , sans-serif;
 }
 
