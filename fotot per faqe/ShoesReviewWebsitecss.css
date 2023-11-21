@@ -1,4 +1,5 @@
 .headerContainer{
+    font-family:"Poppins" , sans-serif;
     display: flex;
     justify-content: space-around;
     
@@ -29,9 +30,20 @@ header{
     
 }
 
-.LoginForm{
-    display: flexbox;
+.LoginForm form {
+    display: flex;
     flex-wrap: wrap;
+}
+
+
+.LoginForm input[type="email"] {
+    height: 30px;
+    width: 200px;
+}
+
+.LoginForm input[type="submit"] {
+    height: 30px;
+    width: 70px;
 }
 
 .quote{
@@ -39,17 +51,25 @@ header{
     flex-wrap: wrap;
     width: 300px;
     font-size: medium;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"Poppins" , sans-serif;
     justify-content: space-around;
     
 }
 
-.ad{
+.ad {
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 10px;
 }
+
+.ad img {
+    height: 200px; 
+    width: 300px; 
+    margin: 10px; 
+}
+
 
 footer{
     background-color: rgba(168, 163, 163, 0.742);
@@ -69,10 +89,16 @@ footer{
 
 .footercenter{
     display: flexbox;
-    
+    justify-items: center;
+    justify-content: center;
+    color: rgb(92, 92, 92);
+    padding-top: 30px;
+    padding-right: 80px;
 }
 
 .Links{
+    padding-top: 10px;
+    padding-right: 80px;
     color: rgb(92, 92, 92);
     display: flexbox;
     justify-items:flex-end
