@@ -76,17 +76,25 @@ header{
     
 }
 
-.ad{ 
+.ad {
     background-color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    overflow: hidden;
+    border-radius: 16px;
 }
 
 .ad img {
-    height: 200px; 
-    width: 300px; 
-    margin: 10px; 
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    object-fit: cover;
+    transition: transform 0.8s;
+}
+
+.ad img:hover {
+    transform: scale(1.5);
 }
 
 
