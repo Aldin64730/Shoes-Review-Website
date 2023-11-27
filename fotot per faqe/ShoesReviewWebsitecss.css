@@ -21,8 +21,6 @@ header{
     background-color: rgb(167, 77, 246);
 }
 
-
-
 .Emri{
     display: flex;
     padding-top: 2%;
@@ -73,7 +71,10 @@ header{
 .ContactingSites{
     display: flex;
     justify-content: space-around;
-    
+}
+
+.ContactingSites a {
+    margin: 0 10px; 
 }
 
 .ad {
