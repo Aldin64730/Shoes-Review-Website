@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoes Review Website</title>
     <link rel="stylesheet" href="ShoesReviewWebsitecss.css">
+    <link rel="stylesheet" href="ShoesReviewWebsitecss.js">
 </head>
 <body>
     <header class="headerContainer">
-        <h1 class="TopLeft"><img src="headerfoto.jpg" alt="">Footwear Finesse</h1>
-        <form class="LoginForm">
-            <h2><img src="headerfoto.jpg" alt="">Join Our Club:</h2>
-            <input type="email" placeholder="Your Email Address" style="height: 30px; width: 200px">
+        <h1 class="TopLeft">Footwear Finesse</h1>
+        <form class="LoginForm" onsubmit="return validationForm()">
+            <h2>Join Our Club:</h2>
+            <input type="email" id="email" placeholder="Your Email Address" style="height: 30px; width: 200px" required>
+            <input type="password" id="password" placeholder="Your Password" style="height: 30px; width: 200px" required>
             <input type="submit" value="Submit" style="height: 30px; width: 70px;">
         </form>
         <div class="quote">
-            <p><img src="headerfoto.jpg" alt="">Welcome to the City of Stylish shoes, Incorporated!
+            <p>Welcome to the City of Stylish shoes, Incorporated! 
             We appreciate you joining our club. You now have exclusive access to new arrivals and sales.</p>
             <div class="ContactingSites">
                 <a href="#">Home</a>
@@ -24,17 +26,6 @@
             </div>
         </div>
     </header>
-    <hr>
-    <div class="RreshtiLogove">
-        <img src="logot per ads/Nike-Logo.png" alt=""style="height: 50px; width: 80px;">
-        <img src="logot per ads/justdoit.png" alt=""style="height: 80px; width: 100px;">
-        <img src="logot per ads/adidas logo.png" alt="" style="height: 80px; width: 80px;">
-        <img src="logot per ads/adidaslogo2.png" alt=""style="height: 80px; width: 80px;">
-        <img src="logot per ads/lacostelogo.png" alt=""style="height: 80px; width: 100px;">
-        <img src="logot per ads/puma logo.png" alt=""style="height: 80px; width: 100px;">
-        <img src="logot per ads/reeboklogo.png" alt=""style="height: 80px; width: 120px;">
-        </div>
-        <hr>
 <div class="ad">
     <img src="ads/ad1.jpg" alt="">
     <img src="ads/ad2.jpg" alt="">
@@ -45,6 +36,17 @@
     <img src="ads/ad5.jpg" alt="">
     <img src="ads/ad6.jpg" alt="">
 </div>
+<hr>
+<div class="RreshtiLogove">
+    <img src="logot per ads/Nike-Logo.png" alt=""style="height: 50px; width: 80px;">
+    <img src="logot per ads/justdoit.png" alt=""style="height: 80px; width: 100px;">
+    <img src="logot per ads/adidas logo.png" alt="" style="height: 80px; width: 80px;">
+    <img src="logot per ads/adidaslogo2.png" alt=""style="height: 80px; width: 80px;">
+    <img src="logot per ads/lacostelogo.png" alt=""style="height: 80px; width: 100px;">
+    <img src="logot per ads/puma logo.png" alt=""style="height: 80px; width: 100px;">
+    <img src="logot per ads/reeboklogo.png" alt=""style="height: 80px; width: 120px;">
+    </div>
+    <hr>
 <footer>
 <div class="footermain">
     <h2>About our shoes review page</h2>
