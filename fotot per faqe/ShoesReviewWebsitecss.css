@@ -18,7 +18,10 @@
 }
 
 header{
-    background-color: rgb(167, 77, 246);
+    background-image: url("header.jpg");
+    background-size: 100% 100%;
+    
+    
 }
 
 .Emri{
