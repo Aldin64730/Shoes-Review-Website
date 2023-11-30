@@ -4,6 +4,10 @@
     justify-content: space-around;
 }
 
+@media screen and (min-width: 1920px){
+
+}
+
 .TopLeft{
     background-image: url('logot per ads/headerfoto.jpg'); 
         background-repeat: repeat; 
@@ -42,9 +46,7 @@ header{
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    justify-content: space-around;
-    border-radius: 16px;
-    
+    justify-content: space-around;    
 }
 
 .LoginForm{
@@ -69,6 +71,12 @@ header{
     border-radius: 10px; 
 }
 
+.LoginForm input[type="submit"]:hover{
+    transition: 0.25s;
+    background: rgb(125, 166, 254);
+    color: white;
+}
+
 
 .quote{
     display: flex;
@@ -80,13 +88,29 @@ header{
 }
 
 .ContactingSites{
-    display: flex;
-    justify-content: space-around;
+   background: white;
+   width: 360px;
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+   border-radius: 18px;
+   box-shadow: 2px 2px 20px rgba(0, 0, 0, 3);
 }
 
-.ContactingSites a {
-    margin: 0 10px; 
+.ContactingSites a{
+    color: rgb(101, 31, 106);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 18px;
 }
+
+.ContactingSites a:hover{
+    transition: 0.25s;
+    background: rgb(91, 19, 105);
+    color: white;
+}
+
+
 
 .ad {
     background-color: black;
@@ -114,6 +138,7 @@ footer{
     background-color: rgba(168, 163, 163, 0.742);
    display: flex;
    justify-content: space-between;
+   border-radius: 10px;
 }
 
 
@@ -136,6 +161,11 @@ footer{
     font-family:"Poppins" , sans-serif;
 }
 
+.footercenter a{
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+}
+
 .Links{
     padding-top: 10px;
     padding-right: 80px;
@@ -144,4 +174,3 @@ footer{
     justify-items:flex-end;
     font-family:"Poppins" , sans-serif;
 }
-
