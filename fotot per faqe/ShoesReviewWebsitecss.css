@@ -46,7 +46,9 @@ header{
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    justify-content: space-around;    
+    justify-content: space-around;
+    border-radius: 16px;
+    
 }
 
 .LoginForm{
