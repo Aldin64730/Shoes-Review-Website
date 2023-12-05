@@ -18,12 +18,15 @@
             <input type="submit" value="Submit" style="height: 30px; width: 70px;">
         </form>
         <form id="RegisterForm">
-            <p>Dont have an account yet? <button id="RegisterButton">Register now</button></p>
+            <p>Dont have an account yet? <button id="RegisterButton"
+                style="background: none; border: none; font-size: medium;">Register now</button></p>
                 <div id="registrationForm">
                     <form id="RegisterBar">
                         <input type="email" id="email" placeholder="Your Email Address" style="height: 30px; width: 200px; border-radius: 10px;" required>
                         <input type="password" id="password" placeholder="Your Password" style="height: 30px; width: 200px; border-radius: 10px;" required>
-                        <input type="submit" value="Register" style="border-radius: 10px;">
+                        <input type="submit" value="Register" style="height: 30px; width: 70px; border-radius: 10px; color: #fff; cursor: pointer;"
+                        onmouseover="this.style.backgroundColor='#2980b9';"
+                        onmouseout="this.style.backgroundColor='#3498db';">
                     </form>
                 </div> 
         </form>

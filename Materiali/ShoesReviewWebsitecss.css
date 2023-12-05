@@ -78,11 +78,6 @@ header{
     color: white;
 }
 
-#registrationForm {
-    display: none; 
-}
-
-
 .quote{
     display: flex;
     flex-wrap: wrap;
@@ -114,8 +109,6 @@ header{
     background: rgb(91, 19, 105);
     color: white;
 }
-
-
 
 .ad {
     background-color: black;
