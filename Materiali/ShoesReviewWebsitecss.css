@@ -78,28 +78,10 @@ header{
     color: white;
 }
 
-.RegisterBar{
-    background: white;
-    width: 360px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    border-radius: 18px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 3);
+#registrationForm {
+    display: none; 
 }
 
-.RegisterBar a{
-    color: rgb(101, 31, 106);
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 18px;
-}
-
-.RegisterBar a:hover{
-    transition: 0.25s;
-    background: rgb(91, 19, 105);
-    color: white;
-}
 
 .quote{
     display: flex;
