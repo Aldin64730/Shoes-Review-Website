@@ -1,3 +1,4 @@
+
 .headerContainer{
     font-family:"Poppins" , sans-serif;
     display: flex;
@@ -142,16 +143,17 @@ header{
 
 
 footer{
-    background-color: rgba(168, 163, 163, 0.742);
+    background-color: rgb(39, 39, 39);
+    background-size: 100% 100%;
+    border-radius: 16px;
    display: flex;
    justify-content: space-between;
-   border-radius: 10px;
 }
 
 
 
 .footermain{
-    color: rgb(92, 92, 92);
+    color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
     width: 300px;
@@ -162,7 +164,7 @@ footer{
     display: flexbox;
     justify-items: center;
     justify-content: center;
-    color: rgb(92, 92, 92);
+    color: rgb(255, 255, 255);
     padding-top: 50px;
     padding-right: 80px;
     font-family:"Poppins" , sans-serif;
@@ -170,13 +172,13 @@ footer{
 
 .footercenter a{
     text-decoration: none;
-    color: rgb(92, 92, 92);
+    color: rgb(255, 255, 255);
 }
 
 .Links{
     padding-top: 10px;
     padding-right: 80px;
-    color: rgb(92, 92, 92);
+    color: rgb(255, 255, 255);
     display: flexbox;
     justify-items:flex-end;
     font-family:"Poppins" , sans-serif;
