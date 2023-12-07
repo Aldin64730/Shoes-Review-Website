@@ -1,0 +1,182 @@
+
+.headerContainer{
+    font-family:"Poppins" , sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 1920px){
+
+}
+
+.TopLeft{
+    font-family: serif;
+    color: green;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transform: skew(-15deg); 
+    padding-top: 35px;
+}
+
+header{
+    background-color: black;
+    background-size: 100% 100%;
+    border-radius: 16px;
+    
+    
+}
+
+
+.RreshtiLogove{
+    
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 16px;
+    
+}
+
+.LoginForm{
+    font-family:"Poppins" , sans-serif;
+    color: green;
+}
+
+.LoginForm a{
+    text-decoration: none;
+    color: green;
+}
+
+.LoginForm input[type="email"] {
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.LoginForm input[type="password"] {
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.LoginForm input[type="submit"] {
+    height: 30px;
+    width: 70px;
+    border-radius: 10px; 
+}
+
+.LoginForm input[type="submit"]:hover{
+    transition: 0.25s;
+    background: rgb(125, 166, 254);
+    color: white;
+}
+
+#registrationForm{
+    display: none;
+}
+
+.quote{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    font-size: medium;
+    font-family:"Poppins" , sans-serif;
+    justify-content: space-around; 
+    color: green;  
+}
+
+ .registersubmit:hover{
+    transition: 0.25s;
+    background: rgb(222, 125, 254);
+    color: white;
+}
+
+.ContactingSites{
+   background: green;
+   width: 360px;
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+   border-radius: 18px;
+   box-shadow: 2px 2px 20px rgba(0, 0, 0, 3);
+   align-items: center;
+   height: 30px;
+  
+}
+
+.ContactingSites a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 18px;
+}
+
+.ContactingSites a:hover{
+    transition: 0.25s;
+    background: rgb(91, 19, 105);
+    color: white;
+}
+
+.ad {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.ad img {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    object-fit: cover;
+    transition: transform 0.8s;
+}
+
+.ad img:hover {
+    transform: scale(1.5);
+}
+
+
+footer{
+    background-color: rgb(39, 39, 39);
+    background-size: 100% 100%;
+    border-radius: 16px;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+
+.footermain{
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    font-family:"Poppins" , sans-serif;
+}
+
+.footercenter{
+    display: flexbox;
+    justify-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    padding-top: 50px;
+    padding-right: 80px;
+    font-family:"Poppins" , sans-serif;
+}
+
+.footercenter a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.Links{
+    padding-top: 10px;
+    padding-right: 80px;
+    color: rgb(255, 255, 255);
+    display: flexbox;
+    justify-items:flex-end;
+    font-family:"Poppins" , sans-serif;
+}

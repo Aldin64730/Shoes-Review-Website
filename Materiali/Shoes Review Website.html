@@ -21,15 +21,15 @@
             
             <input type="submit" value="Register" style="height: 30px; width: 70px;">
         </form>
-        <form id="RegisterForm">
-            <p>You already have an account? <button id="RegisterButton"
-                style="background: none; border: none; font-size: medium;">Log in</button></p>
+        <form id="RegisterForm" onsubmit="return validateRegisterForm()">
+            <p style="color: green;">You already have an account? <button id="RegisterButton"
+                style="background: none; border: none; font-size: medium; color: green;">Log in</button></p>
                 <div id="registrationForm">
                     <form id="RegisterBar">
-                        <input type="email" id="email" placeholder="Your Email Address"
+                        <input type="email" id="email1" placeholder="Your Email Address"
                         style="height: 30px; width: 200px; border-radius: 10px;" required>
                         
-                        <input type="password" id="password" placeholder="Your Password"
+                        <input type="password" id="password1" placeholder="Your Password"
                         style="height: 30px; width: 200px; border-radius: 10px;" required>
                         
                         <input type="submit" class="registersubmit" value="Submit"
@@ -42,7 +42,7 @@
             <p>Welcome to the City of Stylish shoes, Incorporated! 
             We appreciate you joining our club. You now have exclusive access to new arrivals and sales.</p>
             <div class="ContactingSites">
-                <a href="HeaderInfo.html">Home</a>
+                <a href="Shoes Review Website.html">Home</a>
                 <a href="HeaderInfo.html">Support</a>
                 <a href="HeaderInfo.html">Advertise</a>
             </div>

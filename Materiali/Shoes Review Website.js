@@ -24,9 +24,9 @@ document.getElementById('RegisterForm').addEventListener('submit', function(even
     event.preventDefault();
 });
 
-function alidavteRegisterForm() {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+function validateRegisterForm(){
+    var email = document.getElementById('email1').value;
+    var password = document.getElementById('password1').value;
 
     if (email.trim() === "" || password.trim() === "") {
         alert("Email and password are required");
@@ -38,7 +38,7 @@ function alidavteRegisterForm() {
         return false;
     }
 
-    return true;
+    return alert("You have logged in successfully");
 }
 
 
