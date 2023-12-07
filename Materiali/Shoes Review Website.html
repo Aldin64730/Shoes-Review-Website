@@ -13,8 +13,12 @@
         <div class="LoginDheRegister">
         <form class="LoginForm" onsubmit="return validateForm()">
             <h2>Join Our Club:</h2>
-            <input type="email" id="email" placeholder="Your Email Address" style="height: 30px; width: 200px" required>
-            <input type="password" id="password" placeholder="Your Password" style="height: 30px; width: 200px" required>
+            <input type="email" id="email" placeholder="Your Email Address"
+            style="height: 30px; width: 200px" required>
+            
+            <input type="password" id="password" placeholder="Your Password"
+            style="height: 30px; width: 200px" required>
+            
             <input type="submit" value="Submit" style="height: 30px; width: 70px;">
         </form>
         <form id="RegisterForm">
@@ -22,11 +26,15 @@
                 style="background: none; border: none; font-size: medium;">Register now</button></p>
                 <div id="registrationForm">
                     <form id="RegisterBar">
-                        <input type="email" id="email" placeholder="Your Email Address" style="height: 30px; width: 200px; border-radius: 10px;" required>
-                        <input type="password" id="password" placeholder="Your Password" style="height: 30px; width: 200px; border-radius: 10px;" required>
-                        <input type="submit" value="Register" style="height: 30px; width: 70px; border-radius: 10px; color: #fff; cursor: pointer;"
-                        onmouseover="this.style.backgroundColor='#2980b9';"
-                        onmouseout="this.style.backgroundColor='#3498db';" onClick="alert('You have been registered succesfully')">
+                        <input type="email" id="email" placeholder="Your Email Address"
+                        style="height: 30px; width: 200px; border-radius: 10px;" required>
+                        
+                        <input type="password" id="password" placeholder="Your Password"
+                        style="height: 30px; width: 200px; border-radius: 10px;" required>
+                        
+                        <input type="submit" class="registersubmit" value="Register"
+                        style="height: 30px; width: 70px; border-radius: 10px; "
+                        onClick="alert('You have been registered succesfully')">
                     </form>
                 </div> 
         </form>

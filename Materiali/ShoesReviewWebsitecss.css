@@ -9,16 +9,13 @@
 }
 
 .TopLeft{
-    background-image: url('logot per ads/headerfoto.jpg'); 
-        background-repeat: repeat; 
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent; 
-        font-weight: bold; 
-        text-transform: uppercase; 
-        font-family: 'Steelfish Rg', 'helvetica neue', 
-                    helvetica, arial, sans-serif; 
-        font-weight: 800; 
-        -webkit-font-smoothing: antialiased; 
+    font-family: serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transform: skew(-15deg); 
+    padding-top: 35px;
 }
 
 header{
@@ -78,6 +75,10 @@ header{
     color: white;
 }
 
+#registrationForm{
+    display: none;
+}
+
 .quote{
     display: flex;
     flex-wrap: wrap;
@@ -87,18 +88,26 @@ header{
     justify-content: space-around;   
 }
 
+ .registersubmit:hover{
+    transition: 0.25s;
+    background: rgb(222, 125, 254);
+    color: white;
+}
+
 .ContactingSites{
-   background: white;
+   background: transparent;
    width: 360px;
    display: flex;
    justify-content: space-between;
    padding: 5px;
    border-radius: 18px;
    box-shadow: 2px 2px 20px rgba(0, 0, 0, 3);
+   align-items: center;
+   height: 30px;
 }
 
 .ContactingSites a{
-    color: rgb(101, 31, 106);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 8px 18px;
     border-radius: 18px;
