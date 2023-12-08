@@ -7,15 +7,14 @@
         align-items: center;
         justify-content: center;
 
-        background-color: black;
+        background-image: url(faqja2img.jpg);
         background-size: 100% 100%;
         color: white;
         flex: 1 0 200px;
-        height: 500px;
+        height: 400px;
         text-align: center;
         padding-left: 100px;
         padding-right: 100px;
-        border-radius: 10px;
        
     }
     
@@ -24,62 +23,22 @@
         align-items: center;
         justify-content: center;
         
-        background-color: black;
-        color: white;
+        background-image: url(faqja2img.jpg);
+        background-position: reverse;
         background-size: 100% 100%;
-
+        color: white;
         flex: 1 0 200px;
-        height: 500px;
+        height: 400px;
         text-align: center;
         padding-left: 100px;
         padding-right: 100px;
-        border-radius: 10px;
     }
-    footer{
-    background-color: rgb(39, 39, 39);
-    background-size: 100% 100%;
-    border-radius: 16px;
-    display: flex;
-    justify-content: space-between;
+
+body{
+    background-color: black;
 }
-
-
-
-.footermain{
-color: rgb(255, 255, 255);
-display: flex;
-flex-wrap: wrap;
-width: 300px;
-font-family:"Poppins" , sans-serif;
-}
-
-.footercenter{
-display: flexbox;
-justify-items: center;
-justify-content: center;
-color: rgb(255, 255, 255);
-padding-top: 50px;
-padding-right: 80px;
-font-family:"Poppins" , sans-serif;
-}
-
-.footercenter a{
-text-decoration: none;
-color: rgb(255, 255, 255);
-}
-
-.Links{
-padding-top: 10px;
-padding-right: 80px;
-color: rgb(255, 255, 255);
-display: flexbox;
-justify-items:flex-end;
-font-family:"Poppins" , sans-serif;
-}
-
 
 .headerContainer{
-    font-family:"Poppins" , sans-serif;
     display: flex;
     justify-content: space-around;
 }
@@ -90,73 +49,18 @@ font-family:"Poppins" , sans-serif;
 
 .TopLeft{
     font-family: serif;
-    color: #ffffff;
+    color: green;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     transform: skew(-15deg); 
     padding-top: 35px;
+    align-content: first baseline;
 }
 
 header{
-    background-image: url("header.jpg");
-    background-size: 100% 100%;
-    border-radius: 16px;
-    
-    
-}
-
-.Emri{
-    display: flex;
-    padding-top: 2%;
-    color: rgb(255, 255, 255);
-    font-size: x-large;
-}
-
-.RreshtiLogove{
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    border-radius: 16px;
-    
-}
-
-.LoginForm{
-    font-family:"Poppins" , sans-serif;
-}
-
-.LoginForm a{
-    text-decoration: none;
-    color: black;
-}
-
-.LoginForm input[type="email"] {
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
-}
-
-.LoginForm input[type="password"] {
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
-}
-
-.LoginForm input[type="submit"] {
-    height: 30px;
-    width: 70px;
-    border-radius: 10px; 
-}
-
-.LoginForm input[type="submit"]:hover{
-    transition: 0.25s;
-    background: rgb(125, 166, 254);
-    color: white;
-}
-
-#registrationForm{
-    display: none;
+    background-image: url(headerwllp.jpg);
+    background-size: 100% 100%;    
 }
 
 .quote{
@@ -164,18 +68,13 @@ header{
     flex-wrap: wrap;
     width: 300px;
     font-size: medium;
-    font-family:"Poppins" , sans-serif;
-    justify-content: space-around;   
-}
-
- .registersubmit:hover{
-    transition: 0.25s;
-    background: rgb(222, 125, 254);
-    color: white;
+    font-family:serif;
+    justify-content: space-around; 
+    color: rgb(255, 255, 255);  
 }
 
 .ContactingSites{
-   background: transparent;
+   
    width: 360px;
    display: flex;
    justify-content: space-between;
@@ -184,6 +83,7 @@ header{
    box-shadow: 2px 2px 20px rgba(0, 0, 0, 3);
    align-items: center;
    height: 30px;
+  
 }
 
 .ContactingSites a{
@@ -195,6 +95,47 @@ header{
 
 .ContactingSites a:hover{
     transition: 0.25s;
-    background: rgb(91, 19, 105);
+    background:  rgb(37, 139, 17);
     color: white;
+}
+footer{
+    background-image: url(headerwllp.jpg);
+    background-size: 100% 100%;
+    border-radius: 5px;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+
+.footermain{
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    font-family:serif;
+}
+
+.footercenter{
+    display: flexbox;
+    justify-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    padding-top: 50px;
+    padding-right: 80px;
+    font-family:serif;
+}
+
+.footercenter a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.Links{
+    padding-top: 10px;
+    padding-right: 80px;
+    color: rgb(255, 255, 255);
+    display: flexbox;
+    justify-items:flex-end;
+    font-family:serif;
 }
