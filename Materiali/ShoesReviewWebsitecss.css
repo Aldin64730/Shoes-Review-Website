@@ -144,6 +144,9 @@ header{
     margin-top: 10px;
 }
 .rubrika{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     width: 250px;
