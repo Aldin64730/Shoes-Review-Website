@@ -8,6 +8,10 @@
 
 }
 
+body{
+    background-color: black;
+}
+
 .TopLeft{
     font-family: serif;
     color:#39ff14;
