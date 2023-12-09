@@ -81,9 +81,15 @@ header{
     font-size: 20px;
     margin-top: 5px;
     padding-right: 100px;
+    
     border: none;
     cursor: pointer;
     transition: color 0.3s ease;
+}
+
+.opsionet a{
+    text-decoration: none;
+    color: white;
 }
 
 .opsionet :hover {
@@ -106,7 +112,7 @@ header{
 
  .registersubmit:hover{
     transition: 0.25s;
-    background:  rgb(37, 139, 17);
+    background:  #00ff00;
     color: white;
 }
 
@@ -155,19 +161,9 @@ footer{
     justify-items: center;
     justify-content: center;
     color: rgb(255, 255, 255);
-    padding-top: 50px;
+    padding-top: 135px;
     padding-right: 80px;
     font-family:serif;
-}
-
-.home{
-    display: flex;
-}
-.support{
-    display: flex;
-}
-.support{
-    display: flex;
 }
 
 .footercenter a{
@@ -179,7 +175,7 @@ footer{
 
 .footercenter a:hover{
     transition: 0.25s;
-    background:  rgb(37, 139, 17);
+    background:  #00ff00;
     color: white;
 }
 
