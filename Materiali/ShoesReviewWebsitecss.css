@@ -10,7 +10,7 @@
 
 .TopLeft{
     font-family: serif;
-    color: green;
+    color:#39ff14;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
@@ -21,17 +21,7 @@
 header{
     background-image: url(headerwllp.jpg);
     background-size: 100% 100%;
-    border-radius: 5px;
-    
-    
-}
-
-
-.RreshtiLogove{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    
+   
 }
 
 .LoginForm{
@@ -41,7 +31,7 @@ header{
 
 .LoginForm a{
     text-decoration: none;
-    color: rgb(37, 139, 17);
+    color: #39ff14;
 }
 
 .LoginForm input[type="email"] {
@@ -64,8 +54,40 @@ header{
 
 .LoginForm input[type="submit"]:hover{
     transition: 0.25s;
-    background: rgb(37, 139, 17);
+    background: #39ff14;
     color: white;
+}
+
+#RegisterButton{
+    background: none;
+    font-family: serif;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: white;
+
+}
+
+#RegisterButton:hover{
+    color: #00ff00; 
+}
+
+
+
+.opsionet  {
+    display: inline-block;
+    font-family: serif;
+    font-size: 20px;
+    margin-top: 5px;
+    padding-right: 100px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.opsionet :hover {
+    color: #00ff00; 
 }
 
 #registrationForm{
@@ -88,39 +110,13 @@ header{
     color: white;
 }
 
-.ContactingSites{
-   
-   width: 360px;
-   display: flex;
-   justify-content: space-between;
-   padding: 5px;
-   border-radius: 18px;
-   box-shadow: 2px 2px 20px rgba(0, 0, 0, 3);
-   align-items: center;
-   height: 30px;
-  
-}
-
-.ContactingSites a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 18px;
-}
-
-.ContactingSites a:hover{
-    transition: 0.25s;
-    background:  rgb(37, 139, 17);
-    color: white;
-}
-
 .ad {
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     overflow: hidden;
-    border-radius: 5px;
+    
 }
 
 .ad img {
@@ -134,36 +130,12 @@ header{
 .ad img:hover {
     transform: scale(1.5);
 }
-.nikes{
-    background-image: url(nikessection.jpg);
-    background-size: 100% 100%;
-    width: 90%;
-    display: flexbox;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-.rubrika{
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    height: 200px;
-}
 
-.views_date{
-    width: 250px;
-    display: flex;
-    justify-content: space-between;
-    color: lightgray;
-}
 
 footer{
     background-image: url(headerwllp.jpg);
     background-size: 100% 100%;
-    border-radius: 5px;
+   
    display: flex;
    justify-content: space-between;
 }
@@ -189,8 +161,16 @@ footer{
 }
 
 .footercenter a{
-    text-decoration: none;
     color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 18px;
+}
+
+.footercenter a:hover{
+    transition: 0.25s;
+    background:  rgb(37, 139, 17);
+    color: white;
 }
 
 .Links{
