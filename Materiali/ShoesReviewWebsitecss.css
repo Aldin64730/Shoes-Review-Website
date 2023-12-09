@@ -160,6 +160,16 @@ footer{
     font-family:serif;
 }
 
+.home{
+    display: flex;
+}
+.support{
+    display: flex;
+}
+.support{
+    display: flex;
+}
+
 .footercenter a{
     color: rgb(255, 255, 255);
     text-decoration: none;
