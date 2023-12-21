@@ -14,7 +14,6 @@ function validateForm() {
 
     return true;
 }
-
 document.getElementById('RegisterButton').addEventListener('click', function() {
     var registrationForm = document.getElementById('registrationForm');
     registrationForm.style.display = (registrationForm.style.display === 'none') ? 'block' : 'none';
@@ -40,5 +39,6 @@ function validateRegisterForm(){
 
     return alert("You have logged in successfully");
 }
+
 
 
