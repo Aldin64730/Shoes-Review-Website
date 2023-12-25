@@ -17,6 +17,13 @@ function validateForm() {
         alert("Username should be at least 4 characters");
         return false;
     }
-    alert("You have registered successfully! Please return to the home page!");
-    return true;
+
+    // Display a success message
+    alert("You have registered successfully! Please return to the home page.");
+
+    // Redirect to the success page
+    window.location.href = "Shoes Review Website.html";
+
+    // Return false to prevent the form from submitting in the traditional way
+    return false;
 }

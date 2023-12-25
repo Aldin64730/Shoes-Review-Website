@@ -70,6 +70,7 @@ header{
 
     cursor: pointer;
     color: black;
+    border: none;
     text-decoration: none;
     text-size-adjust: medium;
     
@@ -79,6 +80,8 @@ header{
 }
 .RegisterButton{
     border-radius: 10px;
+    text-decoration: none;
+    border: none;
 }
 
 .RegisterButton:hover{
