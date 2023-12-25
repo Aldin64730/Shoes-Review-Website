@@ -118,11 +118,11 @@
 </head>
 <body>
     <header>
-    <form>
+    <form onsubmit="return validateForm();">
 
         <h1>Register here:</h1>
 
-        <input type="text" id="name" placeholder="Name & Surname" required>
+        <input type="text" id="user" placeholder="Username" required>
 
         <input type="email" id="email" placeholder="Email" required>
 
@@ -161,7 +161,7 @@
         </div>
         </footer>
 
-        <script>
+        <script src="registerformjs.js">
     
         </script>
 

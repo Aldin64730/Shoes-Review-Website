@@ -12,6 +12,7 @@ body{
     background-color: black;
 }
 
+
 .TopLeft{
     font-family: serif;
     color:#39ff14;
@@ -62,22 +63,28 @@ header{
     color: white;
 }
 
-#RegisterButton{
+.RegisterA{
     background: none;
     font-family: serif;
     font-size: medium;
-    border: none;
+
     cursor: pointer;
-    transition: color 0.3s ease;
+    color: black;
+    text-decoration: none;
+    text-size-adjust: medium;
+    
+}
+.RegisterA:hover{
     color: white;
-
+}
+.RegisterButton{
+    border-radius: 10px;
 }
 
-#RegisterButton:hover{
-    color: #00ff00; 
+.RegisterButton:hover{
+    background-color: #00ff00;
+    color: white;
 }
-
-
 
 .opsionet  {
     display: inline-block;
