@@ -18,12 +18,9 @@ function validateForm() {
         return false;
     }
 
-    // Display a success message
     alert("You have registered successfully! Please return to the home page.");
 
-    // Redirect to the success page
     window.location.href = "Shoes Review Website.html";
-
-    // Return false to prevent the form from submitting in the traditional way
+ 
     return false;
 }
