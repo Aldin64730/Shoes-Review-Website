@@ -1,3 +1,25 @@
+<?php
+session_start();
+include("rfconnection.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $user_name = $_POST['user_name'];
+    $emaili = $_POST['emaili'];
+    $passwordi = $_POST['passwordi'];
+    if(!empty($user_name) && !empty($emaili) && !empty($passwordi)){
+        $user_id = random_num(20);
+        $query = "insert into users (user_id,user_name,email,password) values ('$user_id','$user_name','$emaili','$passwordi')";
+    
+       if( mysqli_query($conn, $query)){
+        header("Location: Shoes%20Review%20Website.php");
+        die;
+       }
+    }else{
+        echo "Ju lutem shkruani informata valide";
+    }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,24 +139,41 @@
     </style>
 </head>
 <body>
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var user = document.getElementById('user').value;
+
+            if (email.trim() === "" || password.trim() === "") {
+                alert("Email and password are required");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password should be at least 6 characters");
+                return false;
+            }
+
+            if (user.length < 4) {
+                alert("Username should be at least 4 characters");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
     <header>
-    <form onsubmit="return validateForm();">
+    <form method="post" onsubmit="return validateForm()">
 
         <h1>Register here:</h1>
 
-        <input type="text" id="user" placeholder="Username" required>
+        <input type="text" id="user" name="user_name" placeholder="Username" required>
 
-        <input type="email" id="email" placeholder="Email" required>
+        <input type="email" id="email" name="emaili" placeholder="Email" required>
 
-        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="password" name="passwordi" placeholder="Password" required>
         
-        <select id="gender" placeholder="Gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-
-
         <button type="submit">Register</button>
     </form>
     </header>
@@ -148,7 +187,7 @@
         </div>
             
         <div class="footercenter">
-            <a href="Shoes Review Website.html">Home</a>
+            <a href="Shoes Review Website.php">Home</a>
             <a href="HeaderInfo.html">Support</a>
             <a href="HeaderInfo.html">Advertise</a>
         </div>
@@ -161,9 +200,7 @@
         </div>
         </footer>
 
-        <script src="registerformjs.js">
-    
-        </script>
+        
 
 </body>
 </html>

@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    $_SESSION;
+    
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +18,14 @@
     <header class="headerContainer">
         <h1 class="TopLeft">Footwear Finesse</h1>
         <div class="LoginDheRegister">
-        <form class="LoginForm" onsubmit="return validateForm()">
+        <form class="LoginForm">
             <h2 style="color: white; font-family: serif;">Join Our Club:</h2>
-            <input type="email" id="email" placeholder="Your Email Address"
-            style="height: 30px; width: 200px; font-family: serif;" required>
             
-            <input type="password" id="password" placeholder="Your Password"
-            style="height: 30px; width: 200px;font-family: serif;" required>
             
             <input type="submit" value="Login" style="height: 30px; width: 70px; font-family: serif;">
         </form>
         <form id="RegisterForm">
-            <p style="color: rgb(255, 255, 255);">You dont have an account yet?<button class="RegisterButton"><a href="registerform.html" class="RegisterA">Register</a></button></p></a>
+            <p style="color: rgb(255, 255, 255);">You dont have an account yet?<button class="RegisterButton"><a href="registerform.php" class="RegisterA">Register</a></button></p></a>
         </form>
         </div>
         <div class="quote">
@@ -59,7 +63,7 @@
 </div>
     
 <div class="footercenter">
-    <a href="Shoes Review Website.html">Home</a>
+    <a href="Shoes Review Website.php">Home</a>
     <a href="HeaderInfo.html">Support</a>
     <a href="HeaderInfo.html">Advertise</a>
 </div>
