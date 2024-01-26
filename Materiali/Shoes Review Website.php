@@ -20,9 +20,10 @@
         <div class="LoginDheRegister">
         <form class="LoginForm">
             <h2 style="color: white; font-family: serif;">Join Our Club:</h2>
-            
-            
-            <input type="submit" value="Login" style="height: 30px; width: 70px; font-family: serif;">
+           <button class="loginbutton"><a href="Login.php">Login</a></button> 
+           <form action="logout.php" method="post">
+            <input type="submit" name="logout" value="logout">
+           </form>
         </form>
         <form id="RegisterForm">
             <p style="color: rgb(255, 255, 255);">You dont have an account yet?<button class="RegisterButton"><a href="registerform.php" class="RegisterA">Register</a></button></p></a>

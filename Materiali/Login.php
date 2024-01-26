@@ -1,24 +1,31 @@
 <?php
-    session_start();
-    include("rfconnection.php");
+include("rfconnection.php");
+session_start();
 
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        $emaili = $_POST['emaili'];
-        $passwordi = $_POST['passwordi'];
-        if(!empty($emaili) && !empty($passwordi)){
-            $user_id = random_num(20);
-            $query = "insert into users (user_id,user_name,email,password) values ('$user_id','$user_name','$emaili','$passwordi')";
-        
-           if( mysqli_query($conn, $query)){
-            header("Location: Shoes%20Review%20Website.php");
-            die;
-           }
-        }else{
-            echo "Ju lutem shkruani informata valide";
-        }
-        }
-    ?>
-    html
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $myemail = mysqli_real_escape_string($conn, $_POST['emaili']);
+    $mypassword = mysqli_real_escape_string($conn, $_POST['passwordi']);
+
+    $sql = "SELECT id FROM users WHERE email = '$myemail' AND password = '$mypassword'";
+    $result = mysqli_query($conn, $sql);
+    $count = mysqli_num_rows($result);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($count == 1) {
+        $_SESSION['login_user'] = $myemail;
+        if($user['id'] == '1'){
+        header("location: Shoes%20Review%20Website.php");
+    } else{
+        header("Location: HeaderInfo.html");
+    }
+ } else{
+        $error = "Your Email or Password is invalid";
+        echo $error;
+    }
+}
+
+?>
+
     
     <!DOCTYPE html>
     <html lang="en">
@@ -139,32 +146,9 @@
         </style>
     </head>
     <body>
-        <script>
-            function validateForm() {
-                var email = document.getElementById('email').value;
-                var password = document.getElementById('password').value;
-                var user = document.getElementById('user').value;
-    
-                if (email.trim() === "" || password.trim() === "") {
-                    alert("Email and password are required");
-                    return false;
-                }
-    
-                if (password.length < 6) {
-                    alert("Password should be at least 6 characters");
-                    return false;
-                }
-    
-                if (user.length < 4) {
-                    alert("Username should be at least 4 characters");
-                    return false;
-                }
-    
-                return true;
-            }
-        </script>
+        
         <header>
-        <form method="post" onsubmit="return validateForm()">
+        <form method="post">
     
             <h1>Login here:</h1>
         

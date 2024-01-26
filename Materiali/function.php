@@ -12,7 +12,7 @@ function check_login($conn){
             return $user_data;
         }
     } 
-    
+    header("Location: Login.php");
     die;
 
 }

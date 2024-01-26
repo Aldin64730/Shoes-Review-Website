@@ -34,10 +34,7 @@ header{
     color:  rgb(37, 139, 17);
 }
 
-.LoginForm a{
-    text-decoration: none;
-    color: #39ff14;
-}
+
 
 .LoginForm input[type="email"] {
     height: 30px;
@@ -51,13 +48,13 @@ header{
     border-radius: 10px;
 }
 
-.LoginForm input[type="submit"] {
+.loginbutton{
     height: 30px;
     width: 70px;
     border-radius: 10px; 
 }
 
-.LoginForm input[type="submit"]:hover{
+.loginbutton:hover{
     transition: 0.25s;
     background: #39ff14;
     color: white;
