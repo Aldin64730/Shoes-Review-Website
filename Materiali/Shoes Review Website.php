@@ -19,14 +19,13 @@
         <h1 class="TopLeft">Footwear Finesse</h1>
         <div class="LoginDheRegister">
         <form class="LoginForm">
-            <h2 style="color: white; font-family: serif;">Join Our Club:</h2>
-           <button class="loginbutton"><a href="Login.php">Login</a></button> 
+          <p style= "color: white; font-size:medium;">Already have an account?<button class="loginbutton"><a href="Login.php">Login</a></button></p> 
            <form action="logout.php" method="post">
             <input type="submit" name="logout" value="logout">
            </form>
         </form>
         <form id="RegisterForm">
-            <p style="color: rgb(255, 255, 255);">You dont have an account yet?<button class="RegisterButton"><a href="registerform.php" class="RegisterA">Register</a></button></p></a>
+            <p style="color: rgb(255, 255, 255);">You dont have an account yet?<button class="RegisterButton"><a href="registerform.php" class="RegisterA">Join Our Club</a></button></p></a>
         </form>
         </div>
         <div class="quote">
