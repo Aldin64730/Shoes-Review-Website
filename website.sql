@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2024 at 12:18 AM
+-- Generation Time: Jan 31, 2024 at 10:31 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -44,7 +44,10 @@ INSERT INTO `users` (`id`, `user_id`, `user_name`, `email`, `password`, `date`) 
 (1, 31573855, 'Aldin', 'aldin@gmail.com', '123123123', '2024-01-24 23:32:44'),
 (2, 818797923341879200, 'Blend', 'Blend@gmail.com', '292929292', '2024-01-24 23:40:44'),
 (3, 542146877753910, 'lalala', 'lalala@gmail.com', '0919091', '2024-01-24 23:53:54'),
-(7, 89512525712355420, 'kakakakak', 'asmdn@gmail.com', 'aksk29929s', '2024-01-25 20:47:19');
+(7, 89512525712355420, 'kakakakak', 'asmdn@gmail.com', 'aksk29929s', '2024-01-25 20:47:19'),
+(10, 28197069692, 'Muhamet', 'meti@gmail.com', 'akssmsms', '2024-01-28 20:25:32'),
+(11, 116586878432340082, 'Mimi', 'mimi@gmail.com', 'mimi123', '2024-01-31 19:37:39'),
+(12, 18771325235936, 'Mbappe', 'lionelmessi@gmail.com', 'lionelmbappe', '2024-01-31 20:28:00');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +67,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
