@@ -1,18 +1,37 @@
 <?php
 
-function check_login($conn){
 
-    if(isset($_SESSION['user_id'])){
-        $id = $_SESSION['user_id'];
-        $query = "select * from users where user_id = '$id' limit 1";
+function isUserLoggedIn() {
+    
 
-        $result = mysqli_query($conn,$query);
-        if($result && mysqli_num_rows($result) > 0){
-            $user_data = mysqli_fetch_assoc($result);
-            return $user_data;
-        }
-    } 
-    header("Location: Login.php");
-    die;
-
+    if (isset($_SESSION['login_user'])) {
+        return true; 
+    } else {
+        return false; 
+    }
 }
+
+
+function isAdmin() {
+    
+
+    
+    if (isset($_SESSION['login_user'])) {
+        include("rfconnection.php"); 
+
+        $myemail = $_SESSION['login_user'];
+
+        
+        $sql = "SELECT id FROM users WHERE email = '$myemail'";
+        $result = mysqli_query($conn, $sql);
+
+        if ($result) {
+            $user = mysqli_fetch_assoc($result);
+            return ($user['id'] === '1' || $user['id'] === '2');
+        }
+    }
+
+    return false; 
+}
+
+

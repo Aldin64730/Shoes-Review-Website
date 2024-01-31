@@ -45,9 +45,9 @@ to providing you with insightful and detailed reviews that go beyond the surface
     </div>
         
     <div class="footercenter">
-        <a href="Shoes Review Website.html">Home</a>
-        <a href="HeaderInfo.html">Support</a>
-        <a href="HeaderInfo.html">Advertise</a>
+        <a href="Shoes Review Website.php">Home</a>
+        <a href="HeaderInfo.php">Support</a>
+        <a href="HeaderInfo.php">Advertise</a>
     </div>
     
     <div class="Links">

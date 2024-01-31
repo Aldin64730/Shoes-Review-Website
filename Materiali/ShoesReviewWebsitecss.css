@@ -2,6 +2,7 @@
 .headerContainer{
     display: flex;
     justify-content: space-around;
+    
 }
 
 @media screen and (min-width: 1920px){
@@ -21,6 +22,14 @@ body{
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     transform: skew(-15deg); 
     padding-top: 35px;
+    
+}
+
+.logout{
+    border-radius: 10px;
+     height: 30px; 
+     width: 80px; 
+     margin-left: 5px;
 }
 
 header{
@@ -35,18 +44,6 @@ header{
 }
 
 
-
-.LoginForm input[type="email"] {
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
-}
-
-.LoginForm input[type="password"] {
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
-}
 
 .loginbutton{
     height: 30px;
@@ -107,9 +104,7 @@ header{
     color: #00ff00; 
 }
 
-#registrationForm{
-    display: none;
-}
+
 
 .quote{
     display: flex;

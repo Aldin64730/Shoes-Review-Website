@@ -6,25 +6,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myemail = mysqli_real_escape_string($conn, $_POST['emaili']);
     $mypassword = mysqli_real_escape_string($conn, $_POST['passwordi']);
 
-    $sql = "SELECT id FROM users WHERE email = '$myemail' AND password = '$mypassword'";
-    $result = mysqli_query($conn, $sql);
-    $count = mysqli_num_rows($result);
-    $user = mysqli_fetch_assoc($result);
+    $sql = "SELECT id FROM users WHERE email = ? AND password = ?";
+    
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $myemail, $mypassword);
+    $stmt->execute();
+    $stmt->store_result();
+    
+    $count = $stmt->num_rows;
+    $stmt->bind_result($userId);
+    $stmt->fetch();
+    $stmt->close();
 
     if ($count == 1) {
         $_SESSION['login_user'] = $myemail;
-        if($user['id'] == '1'){
-        header("location: Shoes%20Review%20Website.php");
-    } else{
-        header("Location: HeaderInfo.html");
-    }
- } else{
+        if ($userId == '1' || $userId == '2') {
+            header("location: Shoes%20Review%20Website.php");
+        } else {
+            header("Location: Shoes%20Review%20Website.php");
+        }
+    } else {
         $error = "Your Email or Password is invalid";
         echo $error;
     }
 }
-
 ?>
+
 
     
     <!DOCTYPE html>
@@ -170,8 +178,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
             <div class="footercenter">
                 <a href="Shoes Review Website.php">Home</a>
-                <a href="HeaderInfo.html">Support</a>
-                <a href="HeaderInfo.html">Advertise</a>
+                <a href="HeaderInfo.php">Support</a>
+                <a href="HeaderInfo.php">Advertise</a>
             </div>
             
             <div class="Links">

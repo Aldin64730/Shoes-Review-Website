@@ -1,6 +1,8 @@
 <?php
+    
     session_start();
     $_SESSION;
+    include("function.php");
     
 
 ?>
@@ -17,22 +19,42 @@
 <body>
     <header class="headerContainer">
         <h1 class="TopLeft">Footwear Finesse</h1>
-        <div class="LoginDheRegister">
+        <?php
+        if(!isUserLoggedIn()){
+       echo ' <div class="LoginDheRegister" style="margin-top: 50px;">
         <form class="LoginForm">
           <p style= "color: white; font-size:medium;">Already have an account?<button class="loginbutton"><a href="Login.php">Login</a></button></p> 
-           <form action="logout.php" method="post">
-            <input type="submit" name="logout" value="logout">
-           </form>
         </form>
         <form id="RegisterForm">
             <p style="color: rgb(255, 255, 255);">You dont have an account yet?<button class="RegisterButton"><a href="registerform.php" class="RegisterA">Join Our Club</a></button></p></a>
         </form>
-        </div>
+        </div> ';}
+        else if(isUserLoggedIn() && isAdmin()){
+          echo ' <div class="admin" style="color: white; display: flex; align-items: center; margin-bottom: 35px;">
+          <div>
+          <p>Welcome</p>
+              <form action="logout.php" method="post">
+                  <input type="submit" name="logout" value="logout" style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px;">
+              </form>
+              </div>
+              <button style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px; margin-top: 50px;" onclick="window.location.href=\'Dashboard.php\'">Dashboard</button>
+      </div>';
+        }else{
+            echo '<div class="user" style="color: white; display: flexbox; align-items: center; margin-top: 40px;">
+             <p>Welcome</p>
+             <div>
+            <form action="logout.php" method="post">
+            <input type="submit" name="logout" value="logout">
+           </form>  
+           </div>
+           </div>';
+        }
+        ?>
         <div class="quote">
             <p>Welcome to the City of Stylish shoes, Incorporated! 
             We appreciate you joining our club. You now have exclusive access to new arrivals and sales.</p>
         <div class="opsionet">
-            <a href="Faqja3.html"><p>Discover the Trend: Click here to see our Latest Shoes!</p></a>
+            <a href="Faqja3.php"><p>Click here to see our Latest Shoes!</p></a>
         </div>
         </div>
     </header>
@@ -64,8 +86,8 @@
     
 <div class="footercenter">
     <a href="Shoes Review Website.php">Home</a>
-    <a href="HeaderInfo.html">Support</a>
-    <a href="HeaderInfo.html">Advertise</a>
+    <a href="HeaderInfo.php">Support</a>
+    <a href="HeaderInfo.php">Advertise</a>
 </div>
 
 <div class="Links">

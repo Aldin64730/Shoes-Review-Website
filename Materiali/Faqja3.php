@@ -229,9 +229,9 @@
         </div>
             
         <div class="footercenter">
-            <a href="Shoes Review Website.html" class="home">Home</a>
-            <a href="HeaderInfo.html" class="support">Support</a>
-            <a href="HeaderInfo.html"class="advertise">Advertise</a>
+            <a href="Shoes Review Website.php" class="home">Home</a>
+            <a href="HeaderInfo.php" class="support">Support</a>
+            <a href="HeaderInfo.php"class="advertise">Advertise</a>
         </div>
         
         <div class="Links">

@@ -2,24 +2,31 @@
 session_start();
 include("rfconnection.php");
 
-
-
-if($_SERVER['REQUEST_METHOD'] == "POST"){
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $user_name = $_POST['user_name'];
     $emaili = $_POST['emaili'];
     $passwordi = $_POST['passwordi'];
-    if(!empty($user_name) && !empty($emaili) && !empty($passwordi)){
+
+    if (!empty($user_name) && !empty($emaili) && !empty($passwordi)) {
         $user_id = random_num(20);
-        $query = "insert into users (user_id,user_name,email,password) values ('$user_id','$user_name','$emaili','$passwordi')";
-    
-       if( mysqli_query($conn, $query)){
-        header("Location: Shoes%20Review%20Website.php");
-        die;
-       }
-    }else{
+        $query = "INSERT INTO users (user_id, user_name, email, password) VALUES (?, ?, ?, ?)";
+
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("ssss", $user_id, $user_name, $emaili, $passwordi);
+        $stmt->execute();
+
+        if ($stmt->affected_rows > 0) {
+            $stmt->close();
+            header("Location: Shoes%20Review%20Website.php");
+            die;
+        } else {
+            $stmt->close();
+            echo "Failed to insert user.";
+        }
+    } else {
         echo "Ju lutem shkruani informata valide";
     }
-    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -190,8 +197,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             
         <div class="footercenter">
             <a href="Shoes Review Website.php">Home</a>
-            <a href="HeaderInfo.html">Support</a>
-            <a href="HeaderInfo.html">Advertise</a>
+            <a href="HeaderInfo.php">Support</a>
+            <a href="HeaderInfo.php">Advertise</a>
         </div>
         
         <div class="Links">

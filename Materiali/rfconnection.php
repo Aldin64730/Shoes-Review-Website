@@ -4,8 +4,12 @@ $db = "website";
 $username = "root";
 $password = "";
 
-if(!$conn = mysqli_connect($servername, $username, $password, $db)){
-    die("failed to connect");
+
+$conn = new mysqli($servername, $username, $password, $db);
+
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 
