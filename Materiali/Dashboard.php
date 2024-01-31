@@ -5,7 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="ShoesReviewWebsitecss.css">
+    <style>
+
+
+
+.del {
+    background-color: red;
+    color: white;
+
+}
+
+body{
+        background-image: url(faqja2img.jpg);
+        background-size: 100% 100%;
+}
+footer{
+    background-image: url(headerwllp.jpg);
+    background-size: 100% 100%;
+   
+   display: flex;
+   justify-content: space-between;
+}
+
+
+
+.footermain{
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    font-family:serif;
+}
+
+.footercenter{
+    display: flexbox;
+    justify-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    padding-top: 135px;
+    padding-right: 80px;
+    font-family:serif;
+}
+
+.footercenter a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 18px;
+}
+
+.footercenter a:hover{
+    transition: 0.25s;
+    background:  #00ff00;
+    color: white;
+}
+
+.Links{
+    padding-top: 10px;
+    padding-right: 80px;
+    color: rgb(255, 255, 255);
+    display: flexbox;
+    justify-items:flex-end;
+    font-family:serif;
+}
+
+    </style>
 </head>
 <body>
     <?php
@@ -14,7 +78,8 @@
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
-        echo '<table border="1" style="background-color: white; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">';
+        echo '<table border="1" style="background-image: url(faqja2img.jpg); color:white;
+        margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">';
         echo '<tr><th>ID</th><th>User ID</th><th>User Name</th><th>Email</th><th>Date</th><th></th></tr>';
     
         while ($row = $result->fetch_assoc()) {
@@ -24,7 +89,7 @@
             echo '<td>' . $row['user_name'] . '</td>';
             echo '<td>' . $row['email'] . '</td>';
             echo '<td>' . $row['date'] . '</td>';
-            echo '<td><button>Delete</button></td>'; 
+            echo '<td><button class="del">Delete</button></td>'; 
             echo '</tr>';
             
         }
