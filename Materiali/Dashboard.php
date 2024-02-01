@@ -10,7 +10,7 @@
 
 
 .del {
-    background-color: red;
+    background-color: green;
     color: white;
 
 }
@@ -72,34 +72,58 @@ footer{
     </style>
 </head>
 <body>
-    <?php
+
+
+<?php
     include("rfconnection.php");
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
+        $userId = $_POST['user_id'];
+
+    // Perform the delete operation based on the user_id
+    $deleteSql = "DELETE FROM users WHERE user_id = '$userId'";
+    $deleteResult = $conn->query($deleteSql);
+
+    if ($deleteResult) {
+        echo 'User deleted successfully.';
+    } else {
+        echo 'Error deleting user: ' . $conn->error;
+    }
+}
+
     $sql = "SELECT * FROM users";
     $result = $conn->query($sql);
-    
+
     if ($result->num_rows > 0) {
         echo '<table border="1" style="background-image: url(faqja2img.jpg); color:white;
         margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">';
-        echo '<tr><th>ID</th><th>User ID</th><th>User Name</th><th>Email</th><th>Date</th><th></th></tr>';
-    
+    echo '<tr><th>ID</th><th>User ID</th><th>User Name</th><th>Email</th><th>Date</th><th></th></tr>';
+
         while ($row = $result->fetch_assoc()) {
+            echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '">';
             echo '<tr>';
             echo '<td>' . $row['id'] . '</td>';
             echo '<td>' . $row['user_id'] . '</td>';
             echo '<td>' . $row['user_name'] . '</td>';
             echo '<td>' . $row['email'] . '</td>';
             echo '<td>' . $row['date'] . '</td>';
-            echo '<td><button class="del">Delete</button></td>'; 
+            echo '<td>
+                <input type="hidden" name="user_id" value="' . $row['user_id'] . '">
+                <input type="submit" name="delete_user" class="del" value="Delete">
+              </td>';
             echo '</tr>';
-            
-        }
-    
-        echo '</table>';
-    } else {
-        echo 'No users found in the database.';
+            echo '</form>';
     }
-    
-    ?>
+
+    echo '</table>';
+} else {
+  echo 'No users found in the database.';
+}
+
+    $conn->close();
+?>
+
+
 <footer>
 <div class="footermain">
     <h2 style="padding-left: 10px;">About our shoes review page</h2>
