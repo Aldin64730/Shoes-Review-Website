@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2024 at 10:00 PM
+-- Generation Time: Feb 01, 2024 at 10:24 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -66,7 +66,7 @@ INSERT INTO `shoes` (`id`, `img_path`, `name`, `date`) VALUES
 (25, 'adidas/yeezy/y1.jpg', 'Yeezy', '2024-02-01 20:57:41'),
 (26, 'adidas/yeezy/y2.webp', 'Yeezy', '2024-02-01 20:57:52'),
 (27, 'adidas/yeezy/y3.webp', 'Yeezy', '2024-02-01 20:58:05'),
-(28, 'adidas/yeezy/y4.webp', 'Yeezy', '2024-02-01 20:58:15');
+(29, 'adidas/yeezy/y4.webp', 'Yeezy', '2024-02-01 21:22:30');
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `shoes`
 --
 ALTER TABLE `shoes`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `users`

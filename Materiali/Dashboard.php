@@ -120,10 +120,54 @@ footer{
   echo 'No users found in the database.';
 }
 
-    $conn->close();
 ?>
 
+<?php
 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_shoe'])) {
+    $id = $_POST['id'];
+
+    // Perform the delete operation based on the shoe id
+    $deleteSql = "DELETE FROM shoes WHERE id = '$id'";
+    $deleteResult = $conn->query($deleteSql);
+
+    if ($deleteResult) {
+        echo 'Shoe deleted successfully.';
+    } else {
+        echo 'Error deleting shoe: ' . $conn->error;
+    }
+}
+
+    $sql = "SELECT * FROM shoes";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+        echo '<table border="1" style="background-image: url(faqja2img.jpg); color:white;
+        margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">';
+        echo "<tr><th>ID</th><th>Image</th><th>Name</th><th>Date</th><th></th></tr>";
+        while ($row = $result->fetch_assoc()) {
+            echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '">';
+            echo "<tr>";
+            echo "<td>" . $row["id"] . "</td>";
+            echo "<td>" . $row["img_path"] . "</td>";
+            echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["date"] . "</td>";
+            echo '<td>
+            <input type="hidden" name="id" value="' . $row['id'] . '">
+            <input type="submit" name="delete_shoe" class="del" value="Delete">
+          </td>';
+            echo "</tr>";
+            echo "</form>";
+        }
+    
+        echo "</table>";
+    } else {
+        echo "0 results";
+    }
+    
+    $conn->close();
+
+?>
 
 
 <footer>
