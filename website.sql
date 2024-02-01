@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2024 at 05:35 PM
+-- Generation Time: Feb 01, 2024 at 10:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -46,7 +46,27 @@ INSERT INTO `shoes` (`id`, `img_path`, `name`, `date`) VALUES
 (5, 'nikes/uptempo/uptempo5.jpg', 'Nike Uptempo', '2024-02-01 16:32:59'),
 (6, 'nikes/uptempo/uptempo9.jpg', 'Nike Uptempo', '2024-02-01 16:33:51'),
 (7, 'nikes/uptempo/uptempo3.jpg', 'Nike Uptempo', '2024-02-01 16:34:10'),
-(8, 'nikes/uptempo/uptempo4.jpg', 'Nike Uptempo', '2024-02-01 16:34:28');
+(8, 'nikes/uptempo/uptempo4.jpg', 'Nike Uptempo', '2024-02-01 16:34:28'),
+(9, 'nikes/nike tns/tn5.jpg', 'Nike TN', '2024-02-01 20:52:49'),
+(10, 'nikes/nike tns/tn8.jpg', 'Nike TN', '2024-02-01 20:53:07'),
+(11, 'nikes/nike tns/tn7.jpg', 'Nike TN', '2024-02-01 20:53:18'),
+(12, 'nikes/nike tns/tn4.jpg', 'Nike TN', '2024-02-01 20:53:29'),
+(13, 'adidas/adidas samba/s1.jpg', 'Adidas Samba', '2024-02-01 20:53:58'),
+(14, 'adidas/adidas samba/s2.jpg', 'Adidas Samba', '2024-02-01 20:54:14'),
+(15, 'adidas/adidas samba/s3.jpg', 'Adidas Samba', '2024-02-01 20:54:27'),
+(16, 'adidas/adidas samba/s4.jpg', 'Adidas Samba', '2024-02-01 20:54:39'),
+(17, 'adidas/adidas campus 00s/cmp1.jpg', 'Adidas Campus', '2024-02-01 20:55:04'),
+(18, 'adidas/adidas campus 00s/cmp2.jpg', 'Adidas Campus', '2024-02-01 20:55:17'),
+(19, 'adidas/adidas campus 00s/cmp3.jpg', 'Adidas Campus', '2024-02-01 20:55:37'),
+(20, 'adidas/adidas campus 00s/cmp4.jpg', 'Adidas Campus', '2024-02-01 20:55:46'),
+(21, 'nikes/jordans/jordan1.jpg', 'Air Jordan 1', '2024-02-01 20:56:09'),
+(22, 'nikes/jordans/jordan11.webp', 'Air Jordan 11', '2024-02-01 20:56:33'),
+(23, 'nikes/jordans/jordan3.jpg', 'Air Jordan 3', '2024-02-01 20:56:57'),
+(24, 'nikes/jordans/jordan4.jpg', 'Air Jordan 4', '2024-02-01 20:57:17'),
+(25, 'adidas/yeezy/y1.jpg', 'Yeezy', '2024-02-01 20:57:41'),
+(26, 'adidas/yeezy/y2.webp', 'Yeezy', '2024-02-01 20:57:52'),
+(27, 'adidas/yeezy/y3.webp', 'Yeezy', '2024-02-01 20:58:05'),
+(28, 'adidas/yeezy/y4.webp', 'Yeezy', '2024-02-01 20:58:15');
 
 -- --------------------------------------------------------
 
@@ -100,7 +120,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `shoes`
 --
 ALTER TABLE `shoes`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `users`
