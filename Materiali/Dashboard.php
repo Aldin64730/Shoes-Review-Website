@@ -124,6 +124,8 @@ footer{
 ?>
 
 
+
+
 <footer>
 <div class="footermain">
     <h2 style="padding-left: 10px;">About our shoes review page</h2>
