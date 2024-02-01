@@ -1,3 +1,41 @@
+<?php
+
+
+session_start();
+include("rfconnection.php"); 
+function isUserLoggedIn() {
+    
+
+    if (isset($_SESSION['login_user'])) {
+        return true; 
+    } else {
+        return false; 
+    }
+}
+
+
+function isAdmin() {
+    global $conn;
+
+    if (isset($_SESSION['login_user'])) {
+        $myemail = $_SESSION['login_user'];
+
+        
+
+        $sql = "SELECT id FROM users WHERE email = '$myemail'";
+        $result = mysqli_query($conn, $sql);
+
+        if ($result) {
+            $user = mysqli_fetch_assoc($result);
+            return ($user['id'] === '1' || $user['id'] === '2');
+        }
+    }
+
+    return false; 
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +51,13 @@
     <header class="headerContainer">
         <h1 class="TopLeft">Footwear Finesse</h1>
 
+        <?php
+        if(isUserLoggedIn() && isAdmin()){
+            echo '<button style="border-radius: 10px; height: 30px; width: 80px;
+             margin-left: 5px; margin-top: 50px;" onclick="window.location.href=\'addshoe.php\'">Add Shoe</button>';
+        }
+        ?>
+
         <div class="quotedhehome">
             <div class="quote">
             <p>Welcome to the City of Stylish shoes, Incorporated! 
@@ -22,62 +67,28 @@
     </header>
 
     <div class="fotografit">
-        <div class="rubrika">
-            <img src="nikes/airforce/airforce7.webp" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Air Force</p>
-                <p>10,460 Views</p>
-            </div>
-        </div>
-        <div class="rubrika">
-            <img src="nikes/airforce/airforce2.webp" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Air Force</p>
-                <p>14,502 Views</p>
-            </div>
-        </div>
-        <div class="rubrika">
-            <img src="nikes/airforce/airforce9.jpg" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Air Force</p>
-                <p>11,906 Views</p>
-            </div>
-        </div>
-        <div class="rubrika">
-            <img src="nikes/airforce/airforce5.webp" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Air Force</p>
-                <p>16,100 Views</p>
-            </div>
-        </div>
-        <div class="rubrika">
-            <img src="nikes/uptempo/uptempo5.jpg" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Uptempo</p>
-                <p>16,008 Views</p>
-            </div>
-        </div>
-        <div class="rubrika">
-            <img src="nikes/uptempo/uptempo9.jpg" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Uptempo</p>
-                <p>12,860 Views</p>
-            </div>
-        </div>
-        <div class="rubrika">
-            <img src="nikes/uptempo/uptempo3.jpg" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Uptempo</p>
-                <p>10,900 Views</p>
-            </div>
-        </div>
-        <div class="rubrika">
-            <img src="nikes/uptempo/uptempo4.jpg" alt="" class="img">
-            <div class="views_date">
-                <p>Nike Uptempo</p>
-                <p>10,820 Views</p>
-            </div>
-        </div>
+    <?php
+        
+        $sql = "SELECT * FROM shoes";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '<div class="rubrika">';
+                echo '<img src="' . $row['img_path'] . '" alt="' . $row['name'] . '" alt="" class="img">';
+                echo '<div class="views_date">';
+                echo '<h2>' . $row['name'] . '</h2>';
+                echo '</div>';
+                echo '</div>';
+         }
+        } else {
+         echo 'No shoes found in the database.';
+        }
+?>
+        
+        
+        
+        
         <div class="rubrika">
             <img src="nikes/nike tns/tn5.jpg" alt="" class="img">
             <div class="views_date">
