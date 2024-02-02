@@ -18,7 +18,27 @@
 </head>
 <body>
     <header class="headerContainer">
-        <h1 class="TopLeft">Footwear Finesse</h1>
+        <div>
+        <h1 class="TopLeft" style="padding-top: 50px;">Footwear Finesse</h1>
+        <?php
+        if(isUserLoggedIn() && isAdmin()){
+            echo ' <div class="admin" style="color: white; display: flex; align-items: center; margin-bottom: 35px;">           
+            <div>
+                <form action="logout.php" method="post">
+                    <input type="submit" name="logout" value="logout" style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px; margin-top: 20px;">
+                </form>
+                </div>
+                <button style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px; margin-top: 20px;" onclick="window.location.href=\'Dashboard.php\'">Dashboard</button>
+                </div>';
+          }else if(isUserLoggedIn()){
+              echo '<div class="user" style="color: white; display: flexbox; align-items: center; margin-top: 20px;">
+              <form action="logout.php" method="post">
+              <input type="submit" name="logout" value="logout">
+             </form>
+             </div>';
+          }
+        ?>
+</div>
         <?php
         if(!isUserLoggedIn()){
        echo ' <div class="LoginDheRegister" style="margin-top: 50px;">
@@ -29,26 +49,6 @@
             <p style="color: rgb(255, 255, 255);">You dont have an account yet?<button class="RegisterButton"><a href="registerform.php" class="RegisterA">Join Our Club</a></button></p></a>
         </form>
         </div> ';}
-        else if(isUserLoggedIn() && isAdmin()){
-          echo ' <div class="admin" style="color: white; display: flex; align-items: center; margin-bottom: 35px;">
-          <div>
-          <p>Welcome</p>
-              <form action="logout.php" method="post">
-                  <input type="submit" name="logout" value="logout" style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px;">
-              </form>
-              </div>
-              <button style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px; margin-top: 50px;" onclick="window.location.href=\'Dashboard.php\'">Dashboard</button>
-      </div>';
-        }else{
-            echo '<div class="user" style="color: white; display: flexbox; align-items: center; margin-top: 40px;">
-             <p>Welcome</p>
-             <div>
-            <form action="logout.php" method="post">
-            <input type="submit" name="logout" value="logout">
-           </form>  
-           </div>
-           </div>';
-        }
         ?>
         <div class="quote">
             <p>Welcome to the City of Stylish shoes, Incorporated! 

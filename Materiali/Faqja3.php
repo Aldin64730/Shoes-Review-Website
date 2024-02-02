@@ -49,15 +49,15 @@ function isAdmin() {
 <body>
 
     <header class="headerContainer">
-        <h1 class="TopLeft">Footwear Finesse</h1>
+       <div>
+    <h1 class="TopLeft">Footwear Finesse</h1>
 
         <?php
         if(isUserLoggedIn() && isAdmin()){
-            echo '<button style="border-radius: 10px; height: 30px; width: 80px;
-             margin-left: 5px; margin-top: 50px;" onclick="window.location.href=\'addshoe.php\'">Add Shoe</button>';
+            echo '<button style="border-radius: 10px; height: 30px; width: 80px;" onclick="window.location.href=\'addshoe.php\'">Add Shoe</button>';
         }
         ?>
-
+</div>
         <div class="quotedhehome">
             <div class="quote">
             <p>Welcome to the City of Stylish shoes, Incorporated! 

@@ -149,28 +149,31 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 </head>
 <body>
     <script>
-        function validateForm() {
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            var user = document.getElementById('user').value;
+       function validateForm() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var user = document.getElementById('user').value;
 
-            if (email.trim() === "" || password.trim() === "") {
-                alert("Email and password are required");
-                return false;
-            }
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Invalid Email format");
+        return false;
+    }
 
-            if (password.length < 6) {
-                alert("Password should be at least 6 characters");
-                return false;
-            }
+    var passwordRegex = /^(?=.*\d).{6,}$/;
+    if (!passwordRegex.test(password)) {
+        alert("Password should be at least 6 characters and include a number");
+        return false;
+    }
 
-            if (user.length < 4) {
-                alert("Username should be at least 4 characters");
-                return false;
-            }
+    var usernameRegex = /^[A-Z][a-zA-Z0-9]{3,}$/;
+    if (!usernameRegex.test(user)) {
+        alert("Username should start with a capital letter and be at least 4 characters");
+        return false;
+    }
 
-            return true;
-        }
+    return true;
+}
     </script>
     <header>
     <form method="post" onsubmit="return validateForm()">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2024 at 10:24 PM
+-- Generation Time: Feb 02, 2024 at 06:32 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -39,7 +39,7 @@ CREATE TABLE `shoes` (
 --
 
 INSERT INTO `shoes` (`id`, `img_path`, `name`, `date`) VALUES
-(1, 'nikes/airforce/airforce7.webp', 'Nike Air Force', '2024-02-01 16:02:19'),
+(1, 'nikes/airforce/airforce7.webp', 'Nike Air Force', '2024-02-02 16:48:36'),
 (2, 'nikes/airforce/airforce2.webp', 'Nike Air Force', '2024-02-01 16:31:56'),
 (3, 'nikes/airforce/airforce9.jpg', 'Nike Air Force', '2024-02-01 16:32:16'),
 (4, 'nikes/airforce/airforce5.webp', 'Nike Air Force', '2024-02-01 16:32:39'),
@@ -90,11 +90,12 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `user_id`, `user_name`, `email`, `password`, `date`) VALUES
 (1, 31573855, 'Aldin', 'aldin@gmail.com', '123123123', '2024-01-24 23:32:44'),
 (2, 818797923341879200, 'Blend', 'Blend@gmail.com', '292929292', '2024-01-24 23:40:44'),
-(3, 542146877753910, 'lalala', 'lalala@gmail.com', '0919091', '2024-01-24 23:53:54'),
+(3, 542146877753910, 'Endrit', 'lalala@gmail.com', '0919091', '2024-02-02 16:49:47'),
 (7, 89512525712355420, 'kakakakak', 'asmdn@gmail.com', 'aksk29929s', '2024-01-25 20:47:19'),
 (10, 28197069692, 'Muhamet', 'meti@gmail.com', 'akssmsms', '2024-01-28 20:25:32'),
 (11, 116586878432340082, 'Mimi', 'mimi@gmail.com', 'mimi123', '2024-01-31 19:37:39'),
-(12, 18771325235936, 'Mbappe', 'lionelmessi@gmail.com', 'lionelmbappe', '2024-01-31 20:28:00');
+(12, 18771325235936, 'Mbappe', 'lionelmessi@gmail.com', 'lionelmbappe', '2024-01-31 20:28:00'),
+(13, 12024639271, 'Lamsma', 'ads@asd.com', 'asdkdk2', '2024-02-02 17:31:41');
 
 --
 -- Indexes for dumped tables
@@ -126,7 +127,7 @@ ALTER TABLE `shoes`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

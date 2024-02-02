@@ -15,6 +15,12 @@
 
 }
 
+.update {
+    background-color: green;
+    color: white;
+
+}
+
 body{
         background-image: url(faqja2img.jpg);
         background-size: 100% 100%;
@@ -77,19 +83,35 @@ footer{
 <?php
     include("rfconnection.php");
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
-        $userId = $_POST['user_id'];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+        if (isset($_POST['delete_user'])) {
+            $userId = $_POST['user_id'];
+            
+            $deleteSql = "DELETE FROM users WHERE user_id = '$userId'";
+            $deleteResult = $conn->query($deleteSql);
 
-    // Perform the delete operation based on the user_id
-    $deleteSql = "DELETE FROM users WHERE user_id = '$userId'";
-    $deleteResult = $conn->query($deleteSql);
+            if ($deleteResult) {
+                echo 'User deleted successfully.';
+            } else {
+                echo 'Error deleting user: ' . $conn->error;
+            }
+        }
 
-    if ($deleteResult) {
-        echo 'User deleted successfully.';
-    } else {
-        echo 'Error deleting user: ' . $conn->error;
+        elseif (isset($_POST['update_user'])) {
+            $userId = $_POST['user_id'];
+            $newUserName = $_POST['new_user_name'];
+
+            $updateSql = "UPDATE users SET user_name = '$newUserName' WHERE user_id = '$userId'";
+            $updateResult = $conn->query($updateSql);
+
+            if ($updateResult) {
+                echo 'User updated successfully.';
+            } else {
+                echo 'Error updating user: ' . $conn->error;
+            }
+        }
     }
-}
 
     $sql = "SELECT * FROM users";
     $result = $conn->query($sql);
@@ -97,7 +119,7 @@ footer{
     if ($result->num_rows > 0) {
         echo '<table border="1" style="background-image: url(faqja2img.jpg); color:white;
         margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">';
-    echo '<tr><th>ID</th><th>User ID</th><th>User Name</th><th>Email</th><th>Date</th><th></th></tr>';
+        echo '<tr><th>ID</th><th>User ID</th><th>User Name</th><th>Email</th><th>Date</th><th></th><th></th></tr>';
 
         while ($row = $result->fetch_assoc()) {
             echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '">';
@@ -111,63 +133,89 @@ footer{
                 <input type="hidden" name="user_id" value="' . $row['user_id'] . '">
                 <input type="submit" name="delete_user" class="del" value="Delete">
               </td>';
+            echo '<td>
+                <input type="hidden" name="user_id" value="' . $row['user_id'] . '">
+                <input type="text" name="new_user_name" placeholder="New User Name" required>
+                <input type="submit" name="update_user" class="update" value="Update">
+              </td>';
             echo '</tr>';
             echo '</form>';
+        }
+
+        echo '</table>';
+    } else {
+        echo 'No users found in the database.';
     }
-
-    echo '</table>';
-} else {
-  echo 'No users found in the database.';
-}
-
 ?>
 
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_shoe'])) {
-    $id = $_POST['id'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['delete_shoe'])) {
+        $id = $_POST['id'];
 
-    // Perform the delete operation based on the shoe id
-    $deleteSql = "DELETE FROM shoes WHERE id = '$id'";
-    $deleteResult = $conn->query($deleteSql);
+        $deleteSql = "DELETE FROM shoes WHERE id = '$id'";
+        $deleteResult = $conn->query($deleteSql);
 
-    if ($deleteResult) {
-        echo 'Shoe deleted successfully.';
-    } else {
-        echo 'Error deleting shoe: ' . $conn->error;
+        if ($deleteResult) {
+            echo 'Shoe deleted successfully.';
+        } else {
+            echo 'Error deleting shoe: ' . $conn->error;
+        }
+    }
+
+    elseif (isset($_POST['update_shoe'])) {
+        $id = $_POST['id'];
+        $newName = $_POST['new_name'];
+
+        $updateSql = "UPDATE shoes SET name = '$newName' WHERE id = '$id'";
+        $updateResult = $conn->query($updateSql);
+
+        if ($updateResult) {
+            echo 'Shoe name updated successfully.';
+        } else {
+            echo 'Error updating shoe name: ' . $conn->error;
+        }
     }
 }
 
-    $sql = "SELECT * FROM shoes";
-    $result = $conn->query($sql);
-    
-    if ($result->num_rows > 0) {
-        echo '<table border="1" style="background-image: url(faqja2img.jpg); color:white;
-        margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">';
-        echo "<tr><th>ID</th><th>Image</th><th>Name</th><th>Date</th><th></th></tr>";
-        while ($row = $result->fetch_assoc()) {
-            echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '">';
-            echo "<tr>";
-            echo "<td>" . $row["id"] . "</td>";
-            echo "<td>" . $row["img_path"] . "</td>";
-            echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . $row["date"] . "</td>";
-            echo '<td>
+$sql = "SELECT * FROM shoes";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo '<table border="1" style="background-image: url(faqja2img.jpg); color:white;
+    margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;">';
+    echo "<tr><th>ID</th><th>Image</th><th>Name</th><th>Date</th><th></th><th></th></tr>";
+
+    while ($row = $result->fetch_assoc()) {
+        echo '<form method="post" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '">';
+        echo "<tr>";
+        echo "<td>" . $row["id"] . "</td>";
+        echo "<td>" . $row["img_path"] . "</td>";
+        echo "<td>" . $row["name"] . "</td>";
+        echo "<td>" . $row["date"] . "</td>";
+        echo '<td>
             <input type="hidden" name="id" value="' . $row['id'] . '">
             <input type="submit" name="delete_shoe" class="del" value="Delete">
           </td>';
-            echo "</tr>";
-            echo "</form>";
-        }
-    
-        echo "</table>";
-    } else {
-        echo "0 results";
+        echo '<td>
+            <input type="hidden" name="id" value="' . $row['id'] . '">
+            <input type="text" name="new_name" placeholder="New Shoe Name" required>
+            <input type="submit" name="update_shoe" class="update" value="Update">
+          </td>';
+        echo "</tr>";
+        echo "</form>";
     }
-    
-    $conn->close();
+
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+$conn->close();
 
 ?>
+
 
 
 <footer>
