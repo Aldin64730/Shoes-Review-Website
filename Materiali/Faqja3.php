@@ -54,12 +54,21 @@ function isAdmin() {
 
         <?php
         if(isUserLoggedIn() && isAdmin()){
-            echo '<button style="border-radius: 10px; height: 30px; width: 80px;" onclick="window.location.href=\'addshoe.php\'">Add Shoe</button>';
+            echo '<div style="display: flex;" >
+            <form action="logout.php" method="post">
+            <input type="submit" name="logout" value="logout" style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px;">
+        </form>
+            <button style="border-radius: 10px; height: 30px; width: 80px;" onclick="window.location.href=\'addshoe.php\'">Add Shoe</button>
+            </div>';
+        }elseif(isUserLoggedIn()){
+            echo '<form action="logout.php" method="post">
+            <input type="submit" name="logout" value="logout" style="border-radius: 10px; height: 30px; width: 80px; margin-left: 5px;">
+        </form>';
         }
         ?>
 </div>
         <div class="quotedhehome">
-            <div class="quote">
+            <div class="quote" style="margin-top: 15px;">
             <p>Welcome to the City of Stylish shoes, Incorporated! 
             We appreciate you joining our club. You now have exclusive access to new arrivals and sales.</p>
         </div>
